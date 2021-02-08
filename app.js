@@ -61,7 +61,7 @@ app.get('/tracks/:trackId', (req, res, next)=>{
     spotifyApi
     .getAlbumTracks(req.params.trackId)
     .then(track => {
-      console.log('The received data from the API: ', track.body.items);
+      //console.log('The received data from the API: ', track.body.items);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       res.render('tracks.hbs', {tracks: track.body.items})
     })
